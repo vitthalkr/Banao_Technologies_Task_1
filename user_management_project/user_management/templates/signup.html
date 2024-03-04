@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <h2>Signup</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>select your category>
+        <select name="choice" id="">
+            <option value="doctor">doctor</option>
+            <option value="patient">patient</option>
+        </select>
+        </p>
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
